@@ -5,9 +5,14 @@
 class Switch
 {
 public:
-    Wire* m_wire;
-    Switch(Wire* wire);
+    Wire *wire;
+
+    Switch();
     ~Switch();
+
+    void init(Wire *w);
+    void on();
+    void off();
 };
 
 #endif // SWITCH_H

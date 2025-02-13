@@ -5,9 +5,14 @@
 class AC
 {
 public:
-    Wire* m_wire;
-    AC(Wire* wire);
+    Wire *wire;
+
+    AC();
     ~AC();
+
+    void setwire(Wire* w);
+    void on();
+    void off();
 };
 
 #endif // AC_H
