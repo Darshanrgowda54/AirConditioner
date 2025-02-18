@@ -5,7 +5,7 @@
 class AC
 {
 public:
-    Wire *wire;
+    Wire* wire;
 
     AC();
     ~AC();

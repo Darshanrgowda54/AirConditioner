@@ -18,7 +18,7 @@ void Wire::connected()
     ac->on();
 }
 
-void Wire::set(AC *ac)
+void Wire::set(AC* ac)
 {
     std::cout<<"Wire set"<<std::endl;
     this->ac = ac;
