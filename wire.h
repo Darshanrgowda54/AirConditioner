@@ -9,8 +9,8 @@ public:
     AC* ac;
 
     Wire();
-    ~Wire();
-    void connected();
+    virtual ~Wire();
+    virtual void connected() = 0;
     void set(AC* ac);
 };
 

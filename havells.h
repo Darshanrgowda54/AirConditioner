@@ -7,7 +7,7 @@ class Havells:public Wire
 public:
     Havells();
     ~Havells();
-    void connected();
+    void connected() override;
 };
 
 #endif // HAVELLS_H

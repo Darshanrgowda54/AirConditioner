@@ -12,12 +12,6 @@ Wire::~Wire()
     std::cout<<"Destructor Wire Called"<<std::endl;
 }
 
-void Wire::connected()
-{
-    std::cout<<"Wire Connected To Switch"<<std::endl;
-    ac->on();
-}
-
 void Wire::set(AC* ac)
 {
     std::cout<<"Wire set"<<std::endl;

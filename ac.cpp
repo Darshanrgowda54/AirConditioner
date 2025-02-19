@@ -16,7 +16,7 @@ void AC::setwire(Wire* w)
     std::cout<<"Setwire Function Called"<<std::endl;
     wire = w;
     w->set(this);
-    std::cout<<"Address Wire:"<<w<<std::endl;
+    //std::cout<<"Address Wire:"<<w<<std::endl;
 }
 
 void AC::on()

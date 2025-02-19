@@ -18,15 +18,8 @@ enum
 
 int main()
 {
-    Wire Wire1;
-    AC AC1;
-    Switch Switch1;
-    Polycab polycab1;
-    Finolex finolex1;
-    Havells havells1;
-    // Switch1.init(&Wire1);
-    // AC1.setwire(&Wire1);
-    // Switch1.on();
+    Wire* wire1;
+    // cout<<&wire1<<endl;
 
     int choice;
     cout<<"Which Brand of Wire to Connect :";
@@ -37,27 +30,37 @@ int main()
     {
     case POLYCAB:
     {
-        AC1.setwire(&polycab1);
-        Switch1.on(&polycab1);
+        //cout<<wire1<<endl;
+        wire1 = new Polycab;
+        //cout<<wire1<<endl;
+        // cout<<&wire1<<endl;
         break;
     }
     case FINOLEX:
     {
-        AC1.setwire(&finolex1);
-        Switch1.on(&finolex1);
+        wire1 = new Finolex;
         break;
     }
     case HAVELLS:
     {
-        AC1.setwire(&havells1);
-        Switch1.on(&havells1);
+        wire1 = new Havells;
         break;
     }
     case EXIT:
-        break;
+        exit(false);
     default:
         cout<<"Invalid"<<endl;
-        break;
+        exit(false);
     }
+
+    AC ac1;
+    Switch switch1;
+    ac1.setwire(wire1);
+    //std::cout<<"Address Wire:"<<wire1<<std::endl;
+    switch1.init(wire1);
+    //std::cout<<"Address Wire:"<<wire1<<std::endl;
+    switch1.on();
+
+    delete wire1;
     return 0;
 }

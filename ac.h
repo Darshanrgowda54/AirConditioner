@@ -4,9 +4,9 @@
 
 class AC
 {
-public:
+private:
     Wire* wire;
-
+public:
     AC();
     ~AC();
 

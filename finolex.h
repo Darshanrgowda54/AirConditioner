@@ -8,7 +8,7 @@ class Finolex:public Wire
 public:
     Finolex();
     ~Finolex();
-    void connected();
+    void connected() override;
 };
 
 #endif // FINOLEX_H
